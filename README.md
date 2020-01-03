@@ -50,3 +50,22 @@ v-for 可以循环的把数组中的数据按列表展示出来
 ``` 
 #### vuejs中在定义函数时使用data里的数据需要加上this,在一个函数中使用另一个函数同理
 #### vue项目中遇到报错：希望的值是number类型拿到的确实string类型，可能是绑定的关键字没加‘ ：’符号 
+#### vue中自定义组件需要子组件
+  ``` 
+      export default {
+        name: "planDetialDig",
+      }
+  ```
+ #### 并且父组件
+ ```
+  import planDetialDig from'../overview/plandetial-dig.vue'
+    export default {
+        components: {
+            planDetialDig,
+        },
+      }
+      //使用
+      <template>
+        <planDetialDig> </planDetialDig>
+      </template>
+ ```
