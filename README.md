@@ -69,3 +69,17 @@ v-for 可以循环的把数组中的数据按列表展示出来
         <planDetialDig> </planDetialDig>
       </template>
  ```
+#### v-if && v-else-if && v-els 用法: v-if不成立判断紧接着的v-else，有多次判断的在两者间加v-else-if。如下理解为status的判断顺序为v-if 齐次v-else-if最后v-else
+  ``` 
+  <div v-if="status == 'loading'"> 
+        <div style="background-color:blue">loading</div>
+    </div>
+
+    <div v-else-if="status === 'success'">
+        <div style="background-color:green">success</div>
+    </div>
+
+    <div v-else>
+        <div style='background-color:red'>fail</div>
+    </div>
+    ```
