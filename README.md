@@ -83,3 +83,4 @@ v-for 可以循环的把数组中的数据按列表展示出来
         <div style='background-color:red'>fail</div>
     </div>
     ```
+####  在Vue生命周期的created()钩子函数进行的DOM操作一定要放在Vue.nextTick()的回调函数中;理解为created()钩子是在dom还完全为渲染就会开始的钩子，所有created()里有操作dom的方法应放在this.$nextTick()中
